@@ -18,13 +18,13 @@ DHT dht(DHTPIN,DHTTYPE);
 #define WEBSITE  "maker.ifttt.com"
 
 
-const char *  MY_SSID = "metacognition";
-const char *  MY_PWD  = "bigdog01$";
+const char *  MY_SSID = "ND-guest";
+const char *  MY_PWD  = "";
 
 
 //use these if you change REST Sting below
-const char * Event_Name = "sensor_data";
-//const char * Maker_Api_Key =    "dKHPutTT1mumfMd3kBXMpM";
+const char * Event_Name = "---- Your Event Name ----";
+//const char * Maker_Api_Key =    "--- Your API Key Part of URL ---";
 
 
 
@@ -94,7 +94,7 @@ WiFiClient client;
           Serial.println("WiFi Client connected ");
 
           client.print(String("POST ") +
-         "/trigger/sensor_data/with/key/dKHPutTT1mumfMd3kBXMpM?value1="
+         "/trigger/---Your Event Name---/with/key/---Your API Part of URL---?value1="
                +                   (String) h
                +      "&value2=" + (String) t
                +      "&value3=" + (String) f
